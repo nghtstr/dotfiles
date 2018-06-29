@@ -24,7 +24,7 @@ font pango:monospace 8
 # The font above is very space-efficient, that is, it looks good, sharp and
 # clear in small sizes. However, its unicode glyph coverage is limited, the old
 # X core fonts rendering does not support right-to-left and this being a bitmap
-# font, it doesn’t scale on retina/hidpi displays.
+# font, it doesn't scale on retina/hidpi displays.
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -96,15 +96,15 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $ws1 "1 "
-set $ws2 "2 "
-#set $ws1 "1 "
-#set $ws2 "2 "
-set $ws3 "3 "
-set $ws4 "4 "
-set $ws5 "5 "
-set $ws6 "6 "
-set $ws7 "7 "
+set $ws1 "1 ?"
+set $ws2 "2 ?"
+#set $ws1 "1 ?"
+#set $ws2 "2 ?"
+set $ws3 "3 ?"
+set $ws4 "4 ?"
+set $ws5 "5 ?"
+set $ws6 "6 ?"
+set $ws7 "7 ?"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -146,10 +146,10 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
+        # Pressing left will shrink the window's width.
+        # Pressing right will grow the window's width.
+        # Pressing up will shrink the window's height.
+        # Pressing down will grow the window's height.
         bindsym j resize shrink width 5 px or 1 ppt
         bindsym k resize grow height 5 px or 1 ppt
         bindsym l resize shrink height 5 px or 1 ppt
@@ -233,12 +233,11 @@ smart_gaps on
 gaps outer 0
 gaps inner 5
 
-#
-set $mode_gaps Gaps: (o) outer, (i) inner
-set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+#set $mode_gaps Gaps: (o) outer, (i) inner
+#set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+#set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
 bindsym $mod+Shift+g mode "$mode_gaps"
- 
+
 mode "$mode_gaps" {
         bindsym o      mode "$mode_gaps_outer"
         bindsym i      mode "$mode_gaps_inner"
@@ -301,37 +300,14 @@ exec --no-startup-id remmina -i
 exec --no-startup-id volumeicon
 exec --no-startup-id xmodmap -e "clear lock" #disable caps lock switch
 exec --no-startup-id xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
-#exec --no-startup-id feh --bg-fill ~/Pictures/digital_space_universe_4k_8k-1920x1080.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/MistyLake.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/arch-linux.jpg.png
-#exec --no-startup-id feh --bg-fill ~/Pictures/SciFi-Wallpapers-4K-Images.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/80s-wallpaper.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/PixelArtCity1.png
-#exec --no-startup-id feh --bg-fill ~/Pictures/SciFiCity.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/zombieForest.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/SimonStallenhag1994.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/SimonStallenhagSnowyVolvo.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/Retro-80s-Arcade-Game.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/80sVectorLarge.jpeg
-#exec --no-startup-id feh --bg-fill ~/Pictures/wallhaven-420754.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/retroWaveCity.jpg
-exec --no-startup-id feh --bg-fill ~/Pictures/SmallMemory.png
-#exec --no-startup-id feh --bg-fill ~/Pictures/alex-jodoin-cloudy-evening.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/sketchNaturalSnow.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/bloodborne.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/minimalforest.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/house-lake-crow.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/Annapurna.jpg
-#exec --no-startup-od feh --bg-fill ~/Pictures/minimalistic_arch_linux_wallpaper_by_malkowitch-dahpghs.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/minimal_hike.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/minimal_circle.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/1337.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/redforest.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/rainystreet.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/Jupter.jpg
 
-exec compton -f
+#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/alex-jodoin-cloudy-evening.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/digital_space_universe_4k_8k-1920x1080.jpg
+
+#exec compton -f
+exec compton --sw-opti --vsync opengl-swc --paint-on-overlay -cCGb -r 10 -o 0.5 -l-12 -t-12 -fF -D35 -I0.4 -O0.4 --blur-background
 
 #exec --no-startup-id polybar main
 
 #exec pidgin
+
