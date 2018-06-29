@@ -305,7 +305,13 @@ exec --no-startup-id xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as es
 exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/digital_space_universe_4k_8k-1920x1080.jpg
 
 #exec compton -f
-exec compton --sw-opti --vsync opengl-swc --paint-on-overlay -cCGb -r 10 -o 0.5 -l-12 -t-12 -fF -D35 -I0.4 -O0.4 --blur-background
+#exec compton --sw-opti --vsync opengl-swc --paint-on-overlay -cCGb -r 10 -o 0.5 -l-12 -t-12 -fF -D35 -I0.4 -O0.4 --blur-background
+
+#blur with shadows
+exec compton --sw-opti --vsync opengl-swc --paint-on-overlay -cCGb -r 3 -o 0.2 -i -2 -t -2 -fF -D35 -I0.4 -O0.4 --blur-background --blur-kern 5x5box
+
+#blur no shadows
+#exec compton --sw-opti --vsync opengl-swc --paint-on-overlay -cCGb -r 0 -i 0 -o 0 -l-12 -t 0 -fF -D35 -I0.4 -O0.4 --blur-background --blur-kern 5x5box
 
 #exec --no-startup-id polybar main
 
