@@ -273,7 +273,6 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-
 focus_follows_mouse no
 
 bindsym $mod+Shift+x exec i3lock --color "#000000" & xset dpms force off
@@ -301,12 +300,15 @@ exec --no-startup-id indicator-kdeconnect
 exec /usr/share/gnome-settings-daemon
 exec --no-startup-id remmina -i
 exec --no-startup-id volumeicon
-exec --no-startup-id xmodmap -e "clear lock" #disable caps lock switch
-exec --no-startup-id xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
+
+## Esc Caps swap
+#exec --no-startup-id xmodmap -e "clear lock" #disable caps lock switch
+#exec --no-startup-id xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
 
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/alex-jodoin-cloudy-evening.jpg
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/digital_space_universe_4k_8k-1920x1080.jpg
-exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/1337.jpg
+#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/1337.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/retrocool.jpg
 
 #exec compton -f
 #exec compton --sw-opti --vsync opengl-swc --paint-on-overlay -cCGb -r 10 -o 0.5 -l-12 -t-12 -fF -D35 -I0.4 -O0.4 --blur-background
