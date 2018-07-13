@@ -1,14 +1,16 @@
 " To use this vimrc first install vundle:
 " git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-" lightline-ale
-" lightline.vim
-" nerdtree
-" vim-monokai-phoenix
-" Vundle.vim
-" editorconfig-vim.git
-" git clone https://github.com/mxw/vim-jsx.git ~/.vim/bundle/vim-jsx
-
+"#!/bin/bash
+"mkdir -p ~/.vim/autoload ~/.vim/bundle
+"curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+"git clone https://github.com/lightline-ale ~/.vim/bundle/lightline-ale
+"git clone https://github.com/lightline.vim ~/.vim/bundle/lightline
+"git clone https://github.com/nerdtree ~/.vim/bundle/nerdtree
+"git clone https://github.com/Vundle.vim ~/.vim/bundle/
+"git clone https://github.com/editorconfig-vim.git ~/.vim/bundle/
+"git clone https://github.com/mxw/vim-jsx.git ~/.vim/bundle/vim-jsx
+	
 execute pathogen#infect()
 
 set mouse=
