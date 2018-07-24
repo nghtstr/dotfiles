@@ -56,10 +56,14 @@ syntax on
 " Disable background opacity
 hi Normal guibg=NONE ctermbg=NONE
 
-" Whitespace characters
+" Toggle `set list` with <F5> key
 set listchars=eol:.,tab:>-,trail:~,extends:>,precedes:<
-set list
+noremap <F5> :set list!<CR>
+inoremap <F5> <C-o>:set list!<CR>
+cnoremap <F5> <C-c>:set list!<CR>
 
 " Tab width
 set tabstop=4
 set shiftwidth=4
+
+set number
