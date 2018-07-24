@@ -28,8 +28,13 @@ filetype off                  " required
 "filetype plugin indent on    " required
 
 " Nerdtree
+" Start Nerdtree if `vim` is used
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Start Nerdtree if `vim foldername` is used	
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
 " JSX syntax highlighting on jsx files only
 let g:jsx_ext_required = 1
@@ -50,3 +55,11 @@ syntax on
 
 " Disable background opacity
 hi Normal guibg=NONE ctermbg=NONE
+
+" Whitespace characters
+set listchars=eol:.,tab:>-,trail:~,extends:>,precedes:<
+set list
+
+" Tab width
+set tabstop=4
+set shiftwidth=4
