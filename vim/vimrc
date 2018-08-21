@@ -10,6 +10,7 @@
 "git clone https://github.com/Vundle.vim ~/.vim/bundle/
 "git clone https://github.com/editorconfig-vim.git ~/.vim/bundle/
 "git clone https://github.com/mxw/vim-jsx.git ~/.vim/bundle/vim-jsx
+"git clone https://github.com/airblade/vim-gitgutter ~/.vim/bundle/vim-gitgutter
 	
 execute pathogen#infect()
 
