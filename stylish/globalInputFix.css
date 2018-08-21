@@ -1,0 +1,36 @@
+input:not(.urlbar-input):not(.textbox-input):not(.form-control):not([type='checkbox']):not([type='radio']) {
+    -moz-appearance: none !important;
+    background-color: #fff;
+    background-color: inherit;
+    color: #444;
+    color: inherit;
+}
+ 
+#downloads-indicator-counter {
+    color: #fff;
+    color: inherit;
+}
+ 
+textarea {
+    -moz-appearance: none !important;
+    background-color: #fff;
+    background-color: inherit;
+    color: #444;
+    color: inherit;
+}
+ 
+select {
+    -moz-appearance: none !important;
+    background-color: #fff;
+    background-color: inherit;
+    color: #444;
+    color: inherit;
+}
+ 
+html {
+    -moz-appearance: none !important;
+    background-color: #fff;
+    /*background-color: inherit;*/
+    color: #000;
+    /*color: inherit;*/
+}
