@@ -308,8 +308,8 @@ exec --no-startup-id volumeicon
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/alex-jodoin-cloudy-evening.jpg
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/digital_space_universe_4k_8k-1920x1080.jpg
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/1337.jpg
-exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/retrocool.jpg
-
+#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/retrocool.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/RainCityLights.jpg
 # Animated Wallpaper
 #exec --no-startup-id /var/scripts/back4 0.10 ~/Pictures/Animated/canal.gif & /var/scripts/back4 speed ~/Pictures/Animated/canal.gif
 

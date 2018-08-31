@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+FOLDER='/home/matthew/Pictures/Wallpaper'
+LIST=`ls ~/Pictures/Wallpaper`
+ITEMS=`echo "$LIST" | wc | awk '{print $1}'`
+RND=`echo "$RANDOM % $ITEMS + 1" | bc`
+WALLPAPER=`ls $FOLDER/ | head -n $RND | tail -n 1`
+feh --bg-fill $FOLDER/$WALLPAPER
