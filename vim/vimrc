@@ -66,5 +66,6 @@ cnoremap <F5> <C-c>:set list!<CR>
 " Tab width
 set tabstop=4
 set shiftwidth=4
-
 set number
+set scrolloff=10
+set list
