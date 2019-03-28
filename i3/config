@@ -319,6 +319,7 @@ exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/retrocool.jpg
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/RainCityLights.jpg
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/SmallMemory.png
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/SimonStallenhag1994.jpg
+#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/sunset.jpg
 
 # Animated Wallpaper
 #exec --no-startup-id /var/scripts/back4 0.10 ~/Pictures/Animated/canal.gif & /var/scripts/back4 speed ~/Pictures/Animated/canal.gif
@@ -332,7 +333,7 @@ exec compton -f
 #exec --no-startup-id compton
 
 #blur no shadows
-#exec compton --sw-opti --vsync opengl-swc --paint-on-overlay -cCGb -r 0 -i 0 -o 0 -l-12 -t 0 -fF -D35 -I0.4 -O0.4 --blur-background --blur-kern 5x5box
+exec compton --sw-opti --vsync opengl-swc --paint-on-overlay -cCGb -r 0 -i 0 -o 0 -l-12 -t 0 -fF -D35 -I0.4 -O0.4 --blur-background --blur-kern 5x5box
 
 ## i3
 #exec --no-startup-id polybar main
