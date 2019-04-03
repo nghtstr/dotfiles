@@ -80,11 +80,11 @@
     "u": {
       "type": "tabs.reopen"
     },
-    "<C-l>": {
+    "<C-j>": {
       "type": "tabs.prev",
       "count": 1
     },
-    "<C-j>": {
+    "<C-k>": {
       "type": "tabs.next",
       "count": 1
     },
@@ -167,6 +167,11 @@
     "f": {
       "type": "follow.start",
       "newTab": false
+    },
+    "F": {
+      "type": "follow.start",
+      "newTab": true,
+      "background": true
     }
   },
   "search": {
@@ -182,7 +187,6 @@
   },
   "properties": {
     "hintchars": "abcdefghijklmnopqrstuvwxyz",
-    "smoothscroll": false,
-    "adjacenttab": true
+    "smoothscroll": false
   }
 }

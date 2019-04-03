@@ -307,10 +307,10 @@ exec --no-startup-id volumeicon
 #exec --no-startup-id xmodmap -e "clear lock" #disable caps lock switch
 #exec --no-startup-id xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
 
-#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/alex-jodoin-cloudy-evening.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/alex-jodoin-cloudy-evening.jpg
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/digital_space_universe_4k_8k-1920x1080.jpg
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/1337.jpg
-exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/retrocool.jpg
+#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/retrocool.jpg
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/RainCityLights.jpg
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/SimonStallenhagSnowyVolvo.jpg
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/AuroraBorealis.png
@@ -320,11 +320,12 @@ exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/retrocool.jpg
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/SmallMemory.png
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/SimonStallenhag1994.jpg
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/sunset.jpg
-
+#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/intenseColors.png
+#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/amongTrees.png
 # Animated Wallpaper
 #exec --no-startup-id /var/scripts/back4 0.10 ~/Pictures/Animated/canal.gif & /var/scripts/back4 speed ~/Pictures/Animated/canal.gif
 
-exec compton -f
+#exec compton -f
 #exec compton --sw-opti --vsync opengl-swc --paint-on-overlay -cCGb -r 10 -o 0.5 -l-12 -t-12 -fF -D35 -I0.4 -O0.4 --blur-background
 
 #blur with shadows
@@ -333,7 +334,8 @@ exec compton -f
 #exec --no-startup-id compton
 
 #blur no shadows
-exec compton --sw-opti --vsync opengl-swc --paint-on-overlay -cCGb -r 0 -i 0 -o 0 -l-12 -t 0 -fF -D35 -I0.4 -O0.4 --blur-background --blur-kern 5x5box
+#exec compton --sw-opti --vsync opengl-swc --paint-on-overlay -cCGb -r 0 -i 0 -o 0 -l-12 -t 0 -fF -D35 -I0.4 -O0.4 --blur-background --blur-kern 5x5box
+exec compton --blur-background --blur-kern 5x5box
 
 ## i3
 #exec --no-startup-id polybar main
