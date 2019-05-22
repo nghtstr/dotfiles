@@ -1,4 +1,4 @@
-" To use this vimrc first install vundle:
+i" To use this vimrc first install vundle:
 " git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 "#!/bin/bash
@@ -69,3 +69,5 @@ set shiftwidth=4
 set number
 set scrolloff=10
 set list
+
+let g:ale_linters = {'javascript': ['eslint']}
