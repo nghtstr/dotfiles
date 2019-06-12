@@ -231,6 +231,9 @@ client.urgent $base02 $base08 $base07 $base08
 #    	}
 #}
 
+#Flash focus
+exec_always --no-startup-id flashfocus
+
 smart_borders no_gaps
 smart_gaps on
 gaps outer 0
@@ -322,7 +325,8 @@ exec --no-startup-id volumeicon
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/sunset.jpg
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/intenseColors.png
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/amongTrees.png
-exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/keyboards.jpg
+#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/keyboards.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/under-the-stranger-horizon.jpg
 
 # Animated Wallpaper
 #exec --no-startup-id /var/scripts/back4 0.10 ~/Pictures/Animated/canal.gif & /var/scripts/back4 speed ~/Pictures/Animated/canal.gif
