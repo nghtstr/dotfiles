@@ -125,9 +125,14 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+nnoremap <C-N> :NERDTreeToggle<CR>
+
 " Window resize
 nnoremap <C-a> <C-w>>
 nnoremap <C-z> <C-w><
+
+
 
 
 " Close Nerdtree if only window
