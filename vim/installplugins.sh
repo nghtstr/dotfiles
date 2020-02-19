@@ -12,4 +12,4 @@ git clone https://github.com/ryanoasis/vim-devicons ~/.vim/bundle/vim-devicons
 git clone https://github.com/airblade/vim-gitgutter ~/.vim/bundle/vim-gitgutter
 
 wget https://raw.githubusercontent.com/Reewr/vim-monokai-phoenix/master/colors/monokai-phoenix.vim -O ~/.vim/colors/monokai-phoenix.vim 
-pacaur -S aur/nerd-fonts-complete
+yay -S aur/nerd-fonts-complete
