@@ -342,7 +342,13 @@ exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/under-the-stranger-horiz
 
 #blur no shadows
 #exec compton --sw-opti --vsync opengl-swc --paint-on-overlay -cCGb -r 0 -i 0 -o 0 -l-12 -t 0 -fF -D35 -I0.4 -O0.4 --blur-background --blur-kern 5x5box
-exec compton --blur-background --blur-kern 5x5box
+#exec compton --blur-background --blur-kern 5x5box
+
+#Serious blur (requires AUR:compton-tryone-git)
+#compton --blur-background --blur-method kawase --blur-strength 10 --opacity-rule 85:'class_g="Termite"' --backend glx
+
+#No blur
+compton
 
 ## i3
 #exec --no-startup-id polybar main
