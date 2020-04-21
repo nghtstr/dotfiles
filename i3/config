@@ -349,7 +349,7 @@ exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/aparatus.jpg
 #exec compton --blur-background --blur-kern 5x5box
 
 #Serious blur (requires AUR:compton-tryone-git)
-compton --blur-background --blur-method kawase --blur-strength 10 --opacity-rule 85:'class_g="Termite"' --backend glx
+#exec --no-startup-id compton --blur-background --blur-method kawase --blur-strength 10 --opacity-rule 85:'class_g="Termite"' --backend glx
 
 exec --no-startup-id compton
 
