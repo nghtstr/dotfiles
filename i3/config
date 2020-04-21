@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-# Setting font size to greater than 0 unhides the title bar
+# Set to 0 to disable title bar
 font pango:monospace 0
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -32,7 +32,8 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+T exec xfce4-terminal
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -206,7 +207,8 @@ set $base0A #f4bf75
 set $base0B #a6e22e
 set $base0C #EE7100
 #set $base0D #FF8300
-set $base0D #FE7A61
+#set $base0D #FE7A61
+set $base0D #295264
 set $base0E #ae81ff
 set $base0F #cc6633
 
@@ -301,8 +303,8 @@ new_window 1pixel
 #wallpapers
 #exec --no-startup-id polychromatic-tray-applet
 exec --no-startup-id ckb-next
-exec --no-startup-id rocketchat-desktop
-exec --no-startup-id indicator-kdeconnect
+#exec --no-startup-id rocketchat-desktop
+#exec --no-startup-id indicator-kdeconnect
 exec /usr/share/gnome-settings-daemon
 exec --no-startup-id remmina -i
 exec --no-startup-id volumeicon
@@ -327,7 +329,9 @@ exec --no-startup-id volumeicon
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/intenseColors.png
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/amongTrees.png
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/keyboards.jpg
-exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/under-the-stranger-horizon.jpg
+#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/under-the-stranger-horizon.jpg
+#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/nebulosa.png
+exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/aparatus.jpg
 
 # Animated Wallpaper
 #exec --no-startup-id /var/scripts/back4 0.10 ~/Pictures/Animated/canal.gif & /var/scripts/back4 speed ~/Pictures/Animated/canal.gif
@@ -345,10 +349,9 @@ exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/under-the-stranger-horiz
 #exec compton --blur-background --blur-kern 5x5box
 
 #Serious blur (requires AUR:compton-tryone-git)
-#compton --blur-background --blur-method kawase --blur-strength 10 --opacity-rule 85:'class_g="Termite"' --backend glx
+compton --blur-background --blur-method kawase --blur-strength 10 --opacity-rule 85:'class_g="Termite"' --backend glx
 
-#No blur
-compton
+exec --no-startup-id compton
 
 ## i3
 #exec --no-startup-id polybar main
@@ -356,6 +359,7 @@ compton
 # KDE
 #exec --no-startup-id wmctrl -c Plasma
 
-#exec pidgin
+exec pidgin
 
-exec --no-startup-id redshift -l 33.51:112.06
+#exec --no-startup-id redshift -l 33.51:112.06
+exec --no-startup-id xfce4-panel
