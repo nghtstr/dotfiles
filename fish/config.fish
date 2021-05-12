@@ -8,4 +8,5 @@ alias grep='grep -s --exclude-dir=node_modules --exclude-dir=.git --exclude=bund
 alias ll='ls -al'
 alias youtube='firefox --new-window https://www.youtube.com'
 alias cb='xclip -sel clip'
+alias cam='mpv av://v4l2:/dev/video0'
 neofetch
