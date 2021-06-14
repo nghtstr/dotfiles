@@ -10,7 +10,9 @@
 "git clone https://github.com/editorconfig-vim.git ~/.vim/bundle/
 "git clone https://github.com/mxw/vim-jsx.git ~/.vim/bundle/vim-jsx
 "git clone https://github.com/airblade/vim-gitgutter ~/.vim/bundle/vim-gitgutter
-	
+scriptencoding utf-8
+set encoding=utf-8
+
 execute pathogen#infect()
 
 set mouse=
@@ -62,7 +64,7 @@ syntax on
 hi Normal guibg=NONE ctermbg=NONE
 
 " Toggle `set list` with <F5> key
-set listchars=eol:,tab:.\ ,trail:~,extends:>,precedes:<
+" set listchars=eol:,tab:.\ ,trail:~,extends:>,precedes:<
 noremap <F5> :set list!<CR>
 inoremap <F5> <C-o>:set list!<CR>
 cnoremap <F5> <C-c>:set list!<CR>
@@ -147,7 +149,8 @@ syntax on
 hi Normal guibg=NONE ctermbg=NONE
 
 " Toggle `set list` with <F5> key
-set listchars=eol:,tab:.\ ,trail:~,extends:>,precedes:<
+set listchars=eol:·,tab:»\ ,trail:¤,extends:>,precedes:<
+
 noremap <F5> :set list!<CR>
 inoremap <F5> <C-o>:set list!<CR>
 cnoremap <F5> <C-c>:set list!<CR>
