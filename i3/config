@@ -38,6 +38,10 @@ bindsym $mod+Return exec kitty
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# Print Screen·
+bindsym --release $mod+Print exec exec gnome-screenshot
+bindsym --release $mod+Shift+Print exec gnome-screenshot -a
+
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
