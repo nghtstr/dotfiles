@@ -1,5 +1,5 @@
 alias ls='ls --color'
-alias werk='cd /home/matthew/Development/networth/'
+alias werk='cd /home/matthew/Projects/networth/'
 alias assh='ssh -i ~/.keys/aws.a---.pem'
 alias assh='ssh -i ~/keys/aws.a---.pem'
 alias nssh='ssh -i ~/.keys/aws.n--.pem'

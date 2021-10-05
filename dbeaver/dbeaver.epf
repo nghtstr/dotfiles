@@ -54,7 +54,7 @@
 /instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.resultset.color.selection.foreground=255,255,255
 /instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.resultset.font=1|Noto Sans|9.0|0|GTK|1|;
 /instance/org.eclipse.ui/ENABLE_ANIMATIONS=true
-/instance/org.jkiss.dbeaver.core/dialog.default.folder=/home/matthew/Development/misc/litmus/sql
+/instance/org.jkiss.dbeaver.core/dialog.default.folder=/home/matthew/Projects/misc/litmus/sql
 /instance/org.jkiss.dbeaver.core/entity.editor.info.sash.state=400
 /instance/org.jkiss.dbeaver.core/org.jkiss.dbeaver.core.confirm.exit=always
 /instance/org.jkiss.dbeaver.core/project.active=General
