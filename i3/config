@@ -33,21 +33,23 @@ floating_modifier $mod
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+T exec xfce4-terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec alacritty 
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# Print Screen·
-bindsym --release $mod+Print exec exec gnome-screenshot
-bindsym --release $mod+Shift+Print exec gnome-screenshot -a
-
 # start dmenu (a program launcher)
-bindsym $mod+d exec rofi -show drun -show-icons -modi drun
+#bindsym $mod+space exec dmenu_run
+bindsym $mod+space exec rofi -show drun -show-icons -modi drun
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+# Print Screen
+bindsym --release $mod+Print exec gnome-screenshot
+bindsym --release $mod+Shift+Print exec gnome-screenshot -a 
 
 #For rofi:
 bindsym F2 exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu'
@@ -94,7 +96,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+#bindsym $mod+shift+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -102,17 +104,17 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $ws1 "1 "
-set $ws2 "2 "
+set $ws1 "1  "
 #set $ws1 "1 ?"
 #set $ws2 "2 ?"
-set $ws3 "3 "
-set $ws4 "4 "
-set $ws5 "5 "
+set $ws2 "2 "
+set $ws3 "3 "
+set $ws4 "4 "
+set $ws5 "5 "
 set $ws6 "6 "
 set $ws7 "7 "
-set $ws8 "8 "
-set $ws9 "9 "
+set $ws8 "8 "
+set $ws9 "9 "
 set $ws0 "0 "
 
 # switch to workspace
@@ -149,6 +151,9 @@ bindsym $mod+Shift+r restart
 bindsym Mod1+Tab workspace next
 bindsym Mod1+Shift+Tab workspace prev
 
+bindsym --whole-window button9 workspace next
+bindsym --whole-window button8 workspace prev
+
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
@@ -177,25 +182,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-
-## monokai
-#set $base00 #272822
-#set $base01 #383830
-#set $base02 #49483e
-#set $base03 #75715e
-#set $base04 #a59f85
-#set $base05 #f8f8f2
-#set $base06 #f5f4f1
-#set $base07 #f9f8f5
-#set $base08 #f92672
-#set $base09 #fd971f
-#set $base0A #f4bf75
-#set $base0B #a6e22e
-#set $base0C #a1efe4
-#set $base0D #66d9ef
-#set $base0E #ae81ff
-#set $base0F #cc6633
-
 ## Orange Borders
 set $base00 #00000000
 set $base01 #00000000
@@ -215,9 +201,10 @@ set $base0C #EE7100
 set $base0D #295264
 set $base0E #ae81ff
 set $base0F #cc6633
+set $base10 #0db6ff
 
 
-client.focused $base0D $base0D $base00 $base01
+client.focused $base10 $base0D $base00 $base01
 client.focused_inactive $base02 $base02 $base03 $base01
 client.unfocused $base01 $base01 $base03 $base01
 client.urgent $base02 $base08 $base07 $base08
@@ -240,11 +227,12 @@ client.urgent $base02 $base08 $base07 $base08
 
 #Flash focus
 exec_always --no-startup-id flashfocus
+#exec_always --no-startup-id nitrogen --restore
 
 smart_borders no_gaps
 smart_gaps on
 gaps outer 0
-gaps inner 10
+gaps inner 5
 
 #set $mode_gaps Gaps: (o) outer, (i) inner
 #set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
@@ -291,85 +279,19 @@ bindsym $mod+Shift+x exec i3lock-fancy & xset dpms force off
 #bindsym $mod+Shift+v exec pavucontrol
 #bindsym $mod+n exec nautilus
 
-bindsym $mod+n exec nautilus --class Naultilus
+bindsym $mod+n exec nautilus 
 for_window [class="Naultilus"] floating enable
-
-bindsym $mod+Shift+Escape exec stacer --class Stacer¤·
-for_window [class="Stacer"] floating enable·
-
-bindsym $mod+c exec gnome-calculator --class GnomeCalculator·
-for_window [class="GnomeCalculator"] floating enable
 
 #bindsym $mod+Shift+g gedit
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 1 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 1 -5% #decrease sound volume
 bindsym XF86AudioMute exec pactl set-sink-mute 1 toggle # mute sound
 
-new_window 1pixel
+new_window pixel 3
 
-#exec xset dpms 15
-
-#wallpapers
-#exec --no-startup-id polychromatic-tray-applet
-exec --no-startup-id numlockx
-exec --no-startup-id ckb-next -b
-#exec --no-startup-id rocketchat-desktop
-#exec --no-startup-id indicator-kdeconnect
-exec /usr/share/gnome-settings-daemon
-exec --no-startup-id remmina -i
-exec --no-startup-id volumeicon
-exec steam-runtime -silent
-
-## Esc Caps swap
-#exec --no-startup-id xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
-#exec --no-startup-id xmodmap -e "clear lock" #disable caps lock switch
-#
-# Gaomon Tablet Fix
-# xinput | grep "Gaomon Tablet Pad" | awk -F "id=" '{print $2}'
-# exec --no-startup-id xinput map-to-output 18 HDMI-0
-
-
-#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/alex-jodoin-cloudy-evening.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/digital_space_universe_4k_8k-1920x1080.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/1337.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/retrocool.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/RainCityLights.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/SimonStallenhagSnowyVolvo.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/AuroraBorealis.png
-#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/1337.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/hax.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/RainCityLights.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/SmallMemory.png
-#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/SimonStallenhag1994.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/sunset.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/intenseColors.png
-#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/amongTrees.png
-#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/keyboards.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/under-the-stranger-horizon.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/nebulosa.png
-exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/aparatus.jpg
-
-# Animated Wallpaper
-#exec --no-startup-id /var/scripts/back4 0.10 ~/Pictures/Animated/canal.gif & /var/scripts/back4 speed ~/Pictures/Animated/canal.gif
-
-#exec compton -f
-#exec compton --sw-opti --vsync opengl-swc --paint-on-overlay -cCGb -r 10 -o 0.5 -l-12 -t-12 -fF -D35 -I0.4 -O0.4 --blur-background
-
-#blur with shadows
-#exec compton --sw-opti --vsync opengl-swc --paint-on-overlay -cCGb -r 3 -o 0.2 -i -2 -t -2 -fF -D35 -I0.4 -O0.4 --blur-background --blur-kern 5x5box
-
+# compton
 #exec --no-startup-id compton
-
-#blur no shadows
-#exec compton --sw-opti --vsync opengl-swc --paint-on-overlay -cCGb -r 0 -i 0 -o 0 -l-12 -t 0 -fF -D35 -I0.4 -O0.4 --blur-background --blur-kern 5x5box
-#exec compton --blur-background --blur-kern 5x5box
-
-#Serious blur (requires AUR:compton-tryone-git)
-#exec --no-startup-id compton --blur-background --blur-method dual_kawase --blur-strength 3 --opacity-rule 85:'class_g="Termite"' --backend glx
-#exec --no-startup-id compton
-
-#Picom
-#exec --no-startup-id picom --experimental-backends -b --config ~/.config/picom/picom.config
+#exec --no-startup-id compton  --blur-background --blur-method dual_kawase --blur-strength 3 --opacity-rule 85:'class_g="Termite"' --backend glx
 exec --no-startup-id picom --experimental-backends -b
 
 ## i3
@@ -378,18 +300,19 @@ exec --no-startup-id picom --experimental-backends -b
 # KDE
 #exec --no-startup-id wmctrl -c Plasma
 
-## Generic Drawing Tablet
-#exec xsetwacom set 'GAOMON Gaomon Tablet stylus' MapToOutput HEAD-1
-#exec xsetwacom set 'GAOMON Gaomon Tablet Pad pad' MapToOutput HEAD-1
-#exec xsetwacom set 'GAOMON Gaomon Tablet Touch Strip pad' MapToOutput HEAD-1
+exec pidgin
 
 #exec --no-startup-id redshift -l 33.51:112.06
 exec --no-startup-id xfce4-panel
-#exec --no-startup-id cd ~/Projects/notes/cherry-tree/ && git pull origin master && cherrytree·
-#exec --no-startup-id cd ~/**path-to-keepassdb**/ && git pull origin master & keepassxc·
 
+# Background picture
+#exec --no-startup-id feh --bg-fill /usr/share/backgrounds/gnome/Loveles.jpg
+exec_always --no-startup-id feh --recursive --randomize --bg-fill /home/mike/Documents/Wallpapers/* 
+#exec_always --no-startup-id watch -n 10 feh --randomize --bg-fill /home/mike/Documents/Wallpapers/*
 
-# Disable wifi sleep on surface book
-#exec --no-startup-id sudo iw dev wlp3s0 set power_save off
-
-for_window [class="^.*"] border pixel 1
+# Startup Scripts
+exec --no-startup-id i3-msg "workspace $ws1; exec code, exec sleep 15, exec brave"
+#exec --no-startup-id i3-msg "workspace $ws1; exec firefox"
+#exec --no-startup-id i3-msg "workspace $ws2; exec dbeaver"
+#exec --no-startup-id i3-msg "workspace $ws3; exec rocketchat-desktop"
+exec_always --no-startup-id xfce4-terminal --hold -x '/bin/syncup' 
