@@ -1,0 +1,68 @@
+Host netbasisapp
+	#	HostName 54.214.179.6
+	HostName app.netbasis.com
+
+Host netbasisdb
+	HostName pgdb
+
+Host netbasisstaging
+	HostName staging.netbasis.com
+
+Host netbasisdev
+	HostName ec2-35-165-30-4.us-west-2.compute.amazonaws.com
+
+Host netbasisutil
+	HostName ci-jank.netbasis.com	
+
+Host pgdb0-old
+	HostName pgdb0.networthservices.com
+
+Host pgdb1
+	HostName pgdb1.networthservices.com
+
+Host pgdb0
+	HostName pgdb0.netbasis.com
+
+Host pgdb-c0
+	HostName PGDB-C0.netbasis.com
+
+Host ejstaging
+	HostName 35.161.141.118
+
+Host ejprod
+	#	HostName ec2-52-41-45-101.us-west-2.compute.amazonaws.com
+	HostName  ejcostbasiscalculator.netbasis.com
+
+Host ejprod1
+	HostName 52.24.93.171
+
+Host broadridgenetbasis
+	HostName broadridge.netbasis.com
+
+Host hrblock
+	Hostname 52.24.93.171
+
+Host prscp
+	HostName prscp.networthservices.com
+
+Host pgdb1
+	HostName pgdb1.networthservices.com
+
+Host pgaax
+	HostName pgdb0.aax.dev
+
+Host aaxdemo
+	Hostname demo.agoraaltx.com
+
+Host aaxdev
+	Hostname dev.aax.dev
+
+Host *
+	ForwardAgent no
+	ForwardX11 no
+	User meggleston
+	IdentityFile /home/mike/.ssh/id_rsa
+	Port 22
+	Protocol 2
+	ServerAliveInterval 60
+	ServerAliveCountMax 30
