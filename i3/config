@@ -347,7 +347,7 @@ exec --no-startup-id nm-applet
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/1337.jpg
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/hax.jpg
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/RainCityLights.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/SmallMemory.png
+#exec --no-startup-id feh --bg-scale ~/Pictures/Wallpaper/SmallMemory.png
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/SimonStallenhag1994.jpg
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/sunset.jpg
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/intenseColors.png
@@ -392,9 +392,10 @@ exec --no-startup-id picom --experimental-backends -b
 #exec xsetwacom set 'GAOMON Gaomon Tablet Touch Strip pad' MapToOutput HEAD-1
 
 #exec --no-startup-id redshift -l 33.51:112.06
+exec --no-startup-id easyeffects --gapplication-service
 exec --no-startup-id xfce4-panel
-#exec --no-startup-id cd ~/Projects/notes/cherry-tree/ && git pull origin master && cherrytree·
-#exec --no-startup-id cd ~/**path-to-keepassdb**/ && git pull origin master & keepassxc·
+exec --no-startup-id cherrytree
+exec --no-startup-id keepassxc
 
 
 # Disable wifi sleep on surface book
