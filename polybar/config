@@ -1,7 +1,7 @@
 [colors]
 ;background = ${xrdb:color0:#222}
 ;background = #2f343f
-background = #00000000
+background = #000000
 background-alt = #333
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
@@ -47,16 +47,16 @@ modules-left = i3
 modules-center = xwindow 
 ;modules-right = date cpu memory cputemp filesystem wlan eth battery1 battery2 volume xkeyboard
 ;modules-right = cpu cputemp memory filesystem volume date powermenu
-modules-right = tray cpu cputemp memory filesystem volume battery3 clock
+modules-right = cpu cputemp memory filesystem volume battery3 clock
 
 
-;tray-position = right
-;tray-padding = 5
-;tray-transparent = false
-;tray-scale = 1
-;tray-maxsize = 16
-;;tray-background = ${colors.background} 
-;tray-background = #00000000
+tray-position = right
+tray-padding = 5
+tray-transparent = false
+tray-scale = 1
+tray-maxsize = 16
+;tray-background = ${colors.background} 
+tray-background = ${colors.background}
 
 ;wm-restack = bspwm
 wm-restack = i3
@@ -69,17 +69,6 @@ wm-restack = i3
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
-[module/tray]
-type = internal/tray
-tray-size = 16
-tray-background = #000000
-tray-padding = 2
-tray-spacing = 4
-tray-position = right
-tray-offset-y = 0
-tray-offset-x = -10
-tray-scale = 1.0
-tray-maxsize = 0
 
 [module/xwindow]
 type = internal/xwindow
@@ -147,7 +136,7 @@ label-mode-background = ${colors.primary}
 ; focused = Active workspace on focused monitor
 ;label-focused = %index%
 label-focused = %name%
-label-focused-background = #00000000
+label-focused-background = #000000
 label-focused-foreground = #FFF
 #label-focused-foreground = ${module/bspwm.label-focused-background}
 #label-focused-underline = ${module/bspwm.label-focused-underline}
@@ -276,7 +265,7 @@ format-disconnected =
 
 [module/clock]
 type = custom/script
-exec = date '+%H:%M'
+exec = date '+%l:%M %p'
 interval = 1
 label =  %output%
 format-underline = #00ffff
@@ -343,7 +332,7 @@ label-volume-foreground = ${colors.foreground}
 
 ;format-volume-underline = #303F9F
 format-volume-underline = #074856
-click-right = pavucontrol
+
 format-muted-prefix = "muted "
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = %percentage%%
