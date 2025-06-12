@@ -241,9 +241,6 @@ client.urgent $base02 $base08 $base07 $base08
 #    	}
 #}
 
-#Flash focus
-exec_always --no-startup-id flashfocus
-
 smart_borders no_gaps
 smart_gaps on
 gaps outer 0
@@ -432,7 +429,8 @@ exec --no-startup-id picom -b
 exec --no-startup-id easyeffects --gapplication-service
 #exec --no-startup-id xfce4-panel
 exec --no-startup-id polybar
-exec --no-startup-id obsidian 
+exec --no-startup-id obsidian
+exec --no-startup-id variety 
 exec --no-startup-id keepassxc
 
 
