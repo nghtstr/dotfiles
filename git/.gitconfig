@@ -1,0 +1,10 @@
+[user]
+	name = Mike Eggleston
+	email = meggleston@networthservices.com
+
+[url "ssh://git@git.netbasis.com/Netbasis"]
+	insteadOf = https://git.netbasis.com/Netbasis
+[pull]
+	rebase = false
+[init]
+	defaultBranch = master
