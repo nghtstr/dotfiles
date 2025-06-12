@@ -1,0 +1,193 @@
+{
+  "workbench.iconTheme": "file-icons",
+  "editor.fontLigatures": true,
+  "eslint.alwaysShowStatus": true,
+  "generateUuid.uuidType": "V4",
+  "files.associations": {
+    "*.nb": "json",
+    "*.sql": "sql"
+  },
+  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+  "todo-tree.highlights.defaultHighlight": {
+    "foreground": "green",
+    "type": "none"
+  },
+  "todohighlight.keywords": [
+    "TODO:",
+    "FIXME:",
+    {
+      "text": "NOTE:",
+      "color": "#DCDCDC",
+      "backgroundColor": "#9400D3",
+      "overviewRulerColor": "grey"
+    },
+    {
+      "text": "ROUTE:",
+      "color": "#DCDCDC",
+      "backgroundColor": "#0c6624",
+      "overviewRulerColor": "#0c6624"
+    }
+  ],
+  "todo-tree.general.tags": ["TODO", "FIXME", "NOTE", "ROUTE", "[ ]", "[x]"],
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "icon": "pin",
+      "type": "line",
+      "iconColour": "yellow"
+    },
+    "FIXME": {
+      "type": "line",
+      "foreground": "black",
+      "iconColour": "pink",
+      "icon": "tools"
+    },
+    "NOTE": {
+      "type": "line",
+      "icon": "note",
+      "iconColour": "#9400D3"
+    },
+    "ROUTE": {
+      "type": "line",
+      "icon": "rocket",
+      "iconColor": ""
+    }
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
+  "todo-tree.tree.showScanModeButton": false,
+  "[json]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "terminal.integrated.scrollback": 5000,
+  "kite.showWelcomeNotificationOnStartup": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "go.toolsManagement.autoUpdate": true,
+  "go.enableCodeLens": {
+    "references": false,
+    "runtest": true
+  },
+  "workbench.editor.decorations.badges": false,
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": ["--fast"],
+  "sync.gist": "deb3a4ef9c177cf8e7a4fa8661e271f2",
+  "security.workspace.trust.untrustedFiles": "open",
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "thunder-client.codeSnippetLanguage": "curl",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.suggest.preview": true,
+  "window.titleBarStyle": "custom",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "go.formatTool": "goimports",
+  "go.buildTags": "local",
+  "gopls": {
+    "build.buildFlags": ["-tags=dev"]
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "thunder-client.showActivityFromCollection": true,
+  "editor.guides.bracketPairs": true,
+  "git.confirmSync": false,
+  "thunder-client.saveToWorkspace": true,
+  "go.buildFlags": [
+    "-tags=local",
+    "-tags=dev",
+    "-tags=staging",
+    "-tags=prod",
+    "-tags=ejprod",
+    "-tags=-ejdev"
+  ],
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "editor.minimap.showSlider": "always",
+  "editor.minimap.size": "fill",
+  "editor.stickyScroll.enabled": true,
+  "terminal.integrated.smoothScrolling": true,
+  "gitlens.views.repositories.includeWorkingTree": true,
+  "[sql]": {
+    "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
+  },
+  "gitlens.autolinks": [
+    {
+      "prefix": "NB-",
+      "url": "https://networthservices.atlassian.net/browse/NB-<num>"
+    },
+    {
+      "prefix": "NWS-",
+      "url": "https://networthservices.atlassian.net/browse/NWS-<num>"
+    },
+    {
+      "prefix": "AAX-",
+      "url": "https://networthservices.atlassian.net/browse/AAX-<num>"
+    },
+    {
+      "prefix": "NCCI-",
+      "url": "https://networthservices.atlassian.net/browse/NCCI-<num>"
+    }
+  ],
+  "go.diagnostic.vulncheck": "Off",
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.completeFunctionParens": true,
+  "eslint.codeActionsOnSave.rules": null,
+  "eslint.format.enable": true,
+  "git.defaultBranchName": "master",
+  "python.formatting.autopep8Args": ["--max-line-length", "200"],
+  "python.formatting.blackArgs": ["--line-length", "200"],
+  "python.formatting.yapfArgs": [
+    "--style",
+    "{based_on_style: google, column_limit: 200, indent_width: 4}"
+  ],
+  "diffEditor.experimental.useVersion2": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "youtrack.showIssuesAssignedTo": "Me",
+  "youtrack.groupIssuesBy": "State",
+  "json-to-go.io.output": "cursor position",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "bash",
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "zsh"
+    },
+    "fish": {
+      "path": "fish"
+    },
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
+    },
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powershell"
+    }
+  },
+  "terminal.integrated.defaultProfile.linux": "fish",
+  "python.analysis.inlayHints.variableTypes": true,
+  "workbench.colorCustomizations": {},
+  "workbench.colorTheme": "2077",
+  "thunder-client.htmlReportResponseLimit": 20000,
+  "terminal.integrated.cursorStyle": "line",
+  "scm.defaultViewMode": "tree",
+  "scm.showHistoryGraph": false,
+  "cSpell.userWords": ["issuemanagement"],
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "terminal.integrated.fontFamily": "'JetBrains Mono'",
+  "autopep8.args": ["--max-line-length", "240"],
+  "python.languageServer": "None",
+  "editor.wordWrapColumn": 160
+}
